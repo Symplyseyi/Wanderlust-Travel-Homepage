@@ -1085,3 +1085,12 @@
   font-size: 1.02rem;
   font-weight: var(--fontWeight-medium);
 }
+
+
+/* @ Media Mobile Version */
+
+@media screen and (max-width: 540px;) {
+  .hero-header-section {
+    display: none;
+  }
+}

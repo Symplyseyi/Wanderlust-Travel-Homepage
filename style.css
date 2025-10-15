@@ -1,0 +1,1087 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  /* TYPOGRAPHY */
+  --font-family: "Montserrat", sans-serif;
+  --fontSize-small: 0.95rem;
+  --fontSize-medium: 1rem;
+  --fontSize-mediumlarge: 1.2rem;
+  --fontSize-large: 1.25rem;
+  --fontSize-xl: 1.5rem;
+  --lineHeight-medium: 24px;
+  --lineHeight-big: 32px;
+  --letterSpacing-small: -1px;
+  --letterSpacing-medium: -0.5px;
+  --letterSpacing-normal: -0.85px;
+  --fontWeight-medium: 500;
+  --fontWeight-semiBold: 600;
+  --fontWeight-Bold: 700;
+
+  /* Shadow Variables */
+  --softShadow: 0 2px 5px #074d781a;
+  --mediumShadowCardHover: 0 8px 30px #074d7826;
+  --strongShadow: 0 12px 40px #074d7833;
+
+  /* Clamp Variables */
+  --minimumSize: 1.5rem;
+  --maximumSize: 4rem;
+  --clampVariable: clamp(
+    var(--minimumSize),
+    1.95rem + 1.5vw,
+    var(--maximumSize)
+  );
+  --minimumSize: 1.2rem;
+  --maximumSize: 3rem;
+  --mediumClampVariable: clamp(
+    var(--minimumSize),
+    1.5rem + 1vw,
+    var(--maximumSize)
+  );
+  --smallminimumSize: 1rem;
+  --smallMaximumSize: 2rem;
+  --smallClampVariable: clamp(
+    var(--smallminimumSize),
+    1rem + 0.6vw,
+    var(--smallMaximumSize)
+  );
+
+  /* COLOR */
+  --mainBgColor: #ffffff;
+  --cardBgColor: #ffffff;
+  --mutedBgColor: #f1f5f9;
+  --primaryTextColor: #283342;
+  --mutedTextColor: #65758b;
+  --primaryButtonBgColor: #074d78;
+  --secBgColor: #fa8938;
+  --secTextColor: #242424;
+  --pryButtonTextColor: #ffffff;
+  --emailButtonBgColor: #ffffff;
+  --emailButtonTextColor: #0a6ca9;
+  --borderColor: #e1e7ef;
+  --emailBgColor: linear-gradient(135deg, #074d78, #0da2e7);
+  --footerBgColor: #0a6ca9;
+  --heroOverlayColor: rgba(7, 77, 120, 0.35);
+  --heroHeaderColor: rgba(255, 255, 255, 0.9);
+  --heroHeaderLogoColor: linear-gradient(135deg, #074d78, #0da2e7);
+
+  /* SPACING */
+  --space1: 0.25rem;
+  --space2: 0.5rem;
+  --space2-2: 0.6rem;
+  --space3: 1rem;
+  --space4: 1.5rem;
+  --space5: 2rem;
+  --space6: 3rem;
+  --space7: 4rem;
+  --space8: 5rem;
+  --space9: 6rem;
+  --space9-9: 7rem;
+  --space9-1: 8rem;
+  --space9-2: 9rem;
+  --space9-3: 10rem;
+  --space9-4: 11rem;
+  --space10: 12rem;
+}
+
+.hero-header-section {
+  width: 100%;
+  height: auto;
+  background-color: var(--heroHeaderColor);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: var(--space3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-logo-container {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.header-logo-container span {
+  font-size: 32px;
+  color: var(--primaryButtonBgColor);
+}
+
+.header-logo-container h2 {
+  font-size: var(--smallClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  background: var(--heroHeaderLogoColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.header-navbar-links {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: var(--space5);
+}
+
+.header-navbar-links a {
+  text-decoration: none;
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-semiBold);
+  color: var(--primaryTextColor);
+}
+
+.header-navbar-links a:hover {
+  color: var(--primaryButtonBgColor);
+}
+
+.header-button-container {
+  width: fit-content;
+  height: auto;
+}
+
+.header-button-container button {
+  background-color: var(--primaryButtonBgColor);
+  color: var(--pryButtonTextColor);
+  padding: var(--space3) var(--space4);
+  border-radius: var(--space2-2);
+  border: none;
+  outline: none;
+  font-size: 0.92rem;
+  font-weight: var(--fontWeight-medium);
+  cursor: pointer;
+  margin-right: var(--space2);
+}
+
+.header-button-container button:hover {
+  background-color: #09598b;
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: var(--mainBgColor);
+  padding-top: var(--space9);
+}
+
+.top-section {
+  width: 96%;
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-image: url(./image/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 2rem;
+  margin-left: 2%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--heroOverlayColor);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 2rem;
+}
+
+.top-section > *:not(.overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-texts-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--space9-1);
+}
+
+.hero-texts-section h1 {
+  max-width: 700px;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.2;
+  text-align: center;
+  font-size: var(--clampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--pryButtonTextColor);
+  line-height: 1.1;
+  word-spacing: -0.45rem;
+}
+
+.hero-texts-section h1 span {
+  color: var(--secBgColor);
+}
+
+.hero-texts-section p {
+  text-align: center;
+  color: var(--pryButtonTextColor);
+  font-size: var(--fontSize-large);
+  font-weight: var(--fontWeight-medium);
+  line-height: 1.2;
+  padding-top: var(--space3);
+}
+
+.hero-booking-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 8.5rem var(--space10);
+}
+
+.booking-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  border: 1px solid var(--borderColor);
+  background-color: var(--cardBgColor);
+  padding: var(--space4);
+  border-radius: var(--space3);
+}
+
+.first-form-field {
+  width: 24%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--mutedBgColor);
+  padding: 1rem 0.25rem 0.9rem 0.5rem;
+  column-gap: var(--space2-2);
+  border-radius: var(--space2-2);
+}
+
+.first-form-field span {
+  font-size: 20px;
+  color: var(--mutedTextColor);
+}
+
+.first-form-field input {
+  border: none;
+  outline: none;
+  background-color: var(--mutedBgColor);
+}
+
+.first-form-field input::placeholder {
+  font-size: var(--fontSize-small);
+  font-weight: 550;
+  color: var(--mutedTextColor);
+}
+
+.second-form-field {
+  width: 24%;
+  height: auto;
+  background-color: var(--mutedBgColor);
+  padding: 1rem;
+  column-gap: var(--space2-2);
+  border-radius: var(--space2-2);
+}
+
+.second-form-field input {
+  border: none;
+  outline: none;
+  background-color: var(--mutedBgColor);
+}
+
+.second-form-field input[type="date"] {
+  font-size: var(--fontSize-small);
+  font-weight: 550;
+  color: var(--mutedTextColor);
+}
+
+.last-form-field {
+  width: 24%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--mutedBgColor);
+  padding: 1.05rem 0.25rem 1rem 0.35rem;
+  column-gap: var(--space2-2);
+  border-radius: var(--space2-2);
+}
+
+.last-form-field span {
+  font-size: 20px;
+  color: var(--mutedTextColor);
+  margin-left: 0.5rem;
+}
+
+.last-form-field input {
+  border: none;
+  outline: none;
+  background-color: var(--mutedBgColor);
+}
+
+.last-form-field input::placeholder {
+  font-size: var(--fontSize-small);
+  font-weight: 550;
+  color: var(--mutedTextColor);
+}
+
+.booking-form-button {
+  width: 24%;
+  height: auto;
+}
+
+.booking-form-button button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  background-color: var(--primaryButtonBgColor);
+  border: none;
+  outline: none;
+  color: var(--pryButtonTextColor);
+  padding: 1rem 0;
+  border-radius: var(--space2-2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  column-gap: var(--space1);
+}
+
+.booking-form-button button span {
+  font-size: 18px;
+}
+
+.booking-form-button button p {
+  font-size: var(--fontSize-small);
+  font-weight: var(--fontWeight-semiBold);
+}
+
+.booking-form-button button:hover {
+  background-color: #09598b;
+}
+
+.first-card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space4);
+  padding-top: var(--space9-2);
+  padding-bottom: 2rem;
+}
+
+.extra-space {
+  padding-bottom: 1.2rem;
+}
+
+.first-card-section-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space1);
+}
+
+.first-card-section-texts h1 {
+  font-size: var(--mediumClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--secTextColor);
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.first-card-section-texts p {
+  font-size: 1.05rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--mutedTextColor);
+}
+
+.first-cards-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--space3);
+}
+.first-card {
+  width: 23.5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  column-gap: var(--space3);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--space3);
+  margin-top: 1rem;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.first-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: var(--space3);
+  border-top-right-radius: var(--space3);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.first-card:hover .image-container img {
+  transform: scale(1.1);
+}
+
+.price-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  width: fit-content;
+  height: auto;
+}
+
+.price-tag button {
+  font-size: var(--fontSize-small);
+  color: var(--primaryTextColor);
+  font-weight: var(--fontWeight-semiBold);
+  background-color: var(--cardBgColor);
+  border-radius: 1rem;
+  padding: 0.3rem 0.7rem;
+  border: none;
+  cursor: pointer;
+}
+
+.card-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1.2rem 0 1.2rem 1.2rem;
+  row-gap: var(--space2-2);
+  transition: none;
+  margin-bottom: 0.5rem;
+}
+
+.card-text-heading {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.card-text-heading span {
+  font-size: 20px;
+  color: var(--mutedTextColor);
+}
+
+.card-text-heading h2 {
+  font-size: clamp(0.9rem, 1rem + 0.15vw, 2.5rem);
+  font-weight: var(--fontWeight-Bold);
+  color: #222222;
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.card-subtext-p {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-subtext-p p {
+  font-size: 0.92rem;
+  color: var(--mutedTextColor);
+  font-weight: var(--fontWeight-medium);
+}
+
+.card-rating-text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-rating-text {
+  width: fit-content;
+  height: auto;
+  column-gap: var(--space2);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-rating-text span {
+  color: var(--secBgColor);
+  font-size: 20px;
+}
+
+.rating-texts {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.rating-texts p:nth-child(1) {
+  font-size: var(--space3);
+  font-weight: var(--fontWeight-Bold);
+  color: #242424;
+}
+
+.rating-texts p:nth-child(2) {
+  font-size: 0.92rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--mutedTextColor);
+}
+
+.why-card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space6);
+  margin: 4rem 0 2rem 0;
+  scroll-margin-top: 120px;
+}
+
+.why-card-section-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space2);
+}
+
+.why-card-section-texts h1 {
+  font-size: var(--mediumClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--secTextColor);
+  letter-spacing: var(--letterSpacing-normal);
+  word-spacing: var(--letterSpacing-normal);
+}
+
+.why-card-section-texts p {
+  font-size: 1.05rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--mutedTextColor);
+}
+
+.why-cards-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--space3);
+}
+
+.why-card {
+  width: 23.5%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space3);
+  border: 2px solid var(--borderColor);
+  border-radius: var(--space3);
+  padding: 1.75rem 0.9rem;
+  box-shadow: var(--softShadow);
+  transition: border-color 0.3s ease;
+}
+
+.why-card:hover {
+  border-color: var(--primaryButtonBgColor);
+}
+
+.why-card-icon {
+  width: fit-content;
+  height: auto;
+}
+
+.why-card-icon span {
+  font-size: 40px;
+  color: var(--primaryButtonBgColor);
+  background-color: var(--mutedBgColor);
+  padding: 0.9rem;
+  border-radius: 1000rem;
+}
+
+.why-card-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space3);
+  text-align: center;
+}
+
+.why-card-texts h2 {
+  font-size: clamp(0.9rem, 1rem + 0.25vw, 2.5rem);
+  font-weight: var(--fontWeight-Bold);
+  color: #222222;
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.why-card-texts p {
+  font-size: 0.92rem;
+  color: var(--mutedTextColor);
+  font-weight: var(--fontWeight-medium);
+  line-height: 1.2rem;
+}
+
+.card p {
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feedback-card-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space6);
+  margin: 4rem 0;
+  scroll-margin-top: 120px;
+}
+
+.feedback-card-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space2);
+}
+
+.feedback-card-texts h1 {
+  font-size: var(--mediumClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--secTextColor);
+  letter-spacing: var(--letterSpacing-normal);
+  word-spacing: var(--letterSpacing-normal);
+}
+
+.feedback-card-texts p {
+  font-size: 1.05rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--mutedTextColor);
+}
+
+.feedback-cards-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  row-gap: var(--space3);
+  padding: var(--space3) var(--space9) 0 var(--space9);
+  perspective: 1000px;
+}
+
+.feedback-card {
+  width: 32%;
+  height: auto;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--space3);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: var(--space4);
+  box-shadow: var(--softShadow);
+  row-gap: var(--space3);
+  transition: transform 0.4s ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.feedback-card:hover {
+  transform: scale(1.012);
+}
+
+.feedback-card-icon {
+  width: fit-content;
+  height: auto;
+  margin-bottom: -1rem;
+}
+
+.feedback-card-icon span {
+  font-size: 55px;
+  color: var(--mutedTextColor);
+}
+
+.feedback-rating-container {
+  width: fit-content;
+  height: auto;
+}
+
+.feedback-rating-container {
+  font-size: 16px;
+  color: var(--secBgColor);
+  word-spacing: -1.5rem;
+}
+
+.feedback-card-text {
+  width: fit-content;
+  height: auto;
+}
+
+.feedback-card-text p {
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: var(--fontWeight-medium);
+  color: var(--secTextColor);
+  line-height: 1.25rem;
+}
+
+.feedback-card-name-address {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 0.25rem;
+}
+
+.feedback-card-name-address h3 {
+  font-size: clamp(0.8rem, 0.9rem + 0.15vw, 2rem);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--secTextColor);
+}
+
+.feedback-card-name-address p {
+  font-size: 0.9rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--mutedTextColor);
+}
+
+.subscribe-section {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space3);
+  background: linear-gradient(
+    90deg,
+    hsl(203 89% 25%) 0%,
+    hsl(199 89% 48%) 50%,
+    hsl(203 89% 25%) 100%
+  );
+}
+
+.subscribe-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space2);
+}
+
+.subscribe-texts span {
+  font-size: 70px;
+  color: var(--pryButtonTextColor);
+}
+
+.subscribe-texts h1 {
+  font-size: var(--mediumClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--pryButtonTextColor);
+}
+
+.subscribe-texts p {
+  max-width: 55%;
+  font-size: 1.2rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--pryButtonTextColor);
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.subscribe-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+  padding-top: var(--space3);
+}
+
+.subscribe-form input {
+  width: 32%;
+  height: auto;
+  padding: 1rem 0.75rem;
+  border-radius: 0.55rem;
+  border: none;
+  outline: none;
+}
+
+.subscribe-form input::placeholder {
+  color: var(--mutedTextColor);
+  font-weight: var(--fontWeight-medium);
+}
+
+.subscribe-form button {
+  width: 10%;
+  height: auto;
+  padding: 0.9rem 0.75rem;
+  border-radius: 0.55rem;
+  border: none;
+  outline: none;
+  color: var(--primaryButtonBgColor);
+  font-size: 0.92rem;
+  font-weight: var(--fontWeight-semiBold);
+  cursor: pointer;
+}
+
+.subscribe-p {
+  width: fit-content;
+  height: auto;
+}
+
+.subscribe-p p {
+  font-size: 0.92rem;
+  font-weight: var(--fontWeight-medium);
+  color: var(--pryButtonTextColor);
+  padding-top: var(--space1);
+}
+
+.footer-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space6);
+  background-color: var(--primaryButtonBgColor);
+  padding: var(--space3);
+  padding-bottom: var(--space6);
+}
+
+.footer-cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: var(--space5) var(--space7) var(--space5) 0;
+  border-bottom: 1px solid var(--mutedTextColor);
+}
+
+.footer-card {
+  width: 24%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.footer-card-heading {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: var(--space2);
+}
+
+.footer-card-heading span {
+  font-size: 32px;
+  color: var(--pryButtonTextColor);
+}
+
+.footer-card-heading h1 {
+  font-size: var(--smallClampVariable);
+  font-weight: var(--fontWeight-Bold);
+  color: var(--pryButtonTextColor);
+  letter-spacing: var(--letterSpacing-normal);
+}
+
+.footer-text p {
+  font-size: 1.02rem;
+  font-weight: var(--fontWeight-medium);
+  color: #cfcece;
+  line-height: 1.65rem;
+}
+
+.footer-card-link {
+  width: 24%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.footer-text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.footer-text a {
+  text-decoration: none;
+  color: #cfcece;
+  font-size: 1.02rem;
+  font-weight: var(--fontWeight-medium);
+}
+
+.footer-text a:hover {
+  color: #0da2e7;
+}
+
+.footer-card-contact {
+  width: 24%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.footer-text-and-socials {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space5);
+}
+
+.footer-texts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--space3);
+}
+
+.footer-texts p {
+  color: #cfcece;
+  font-size: 1.02rem;
+  font-weight: var(--fontWeight-medium);
+}
+
+.footer-socials {
+  width: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: var(--space2-2);
+}
+
+.footer-socials i {
+  font-size: 18px;
+  color: #cfcece;
+}
+
+.footer-copyright {
+  width: fit-content;
+  height: auto;
+}
+
+.footer-copyright p {
+  color: #cfcece;
+  font-size: 1.02rem;
+  font-weight: var(--fontWeight-medium);
+}

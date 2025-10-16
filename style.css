@@ -1088,7 +1088,7 @@
   font-size: 1.02rem;
   font-weight: var(--fontWeight-medium);
 }
-@media (min-width: 550px) and (max-width: 1000px) {
+@media (min-width: 510px) and (max-width: 1000px) {
   /* HEADER */
   .hero-header-section {
     width: 100%;

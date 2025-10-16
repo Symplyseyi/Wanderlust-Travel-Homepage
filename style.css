@@ -1553,7 +1553,7 @@
   .hero-texts-section p {
     font-size: var(--fontSize-medium);
     padding: 0.75rem 1rem 0 1rem;
-    max-width: 100%;
+    max-width: 80%;
     flex-wrap: wrap;
   }
 

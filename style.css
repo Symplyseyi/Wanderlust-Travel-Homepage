@@ -1105,6 +1105,10 @@
   color: #cfcece;
 }
 
+.footer-socials i:hover {
+  color: #0da2e7;
+}
+
 .footer-copyright {
   width: fit-content;
   height: auto;

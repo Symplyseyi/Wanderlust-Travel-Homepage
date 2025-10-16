@@ -1088,11 +1088,8 @@
   font-size: 1.02rem;
   font-weight: var(--fontWeight-medium);
 }
-
-<<<<<<< HEAD
 @media (min-width: 550px) and (max-width: 1000px) {
   /* HEADER */
-
   .hero-header-section {
     width: 100%;
     height: auto;
@@ -1275,7 +1272,7 @@
 
 /* MOBILE VERSION (max-width: 500px) */
 
-@media (min-width: 410px) and (max-width: 540px) {
+@media (min-width: 410px) and (max-width: 500px) {
   /* Hide header section on mobile */
   .header-navbar-links {
     display: none;
@@ -1780,13 +1777,4 @@
     align-items: center;
     column-gap: var(--space2-2);
   }
-=======
-
-/* @ Media Mobile Version */
-
-@media screen and (max-width: 540px;) {
-  .hero-header-section {
-    display: none;
-  }
->>>>>>> d571ab36269cc707a58277b6a13a4b2be7bc65ee
 }

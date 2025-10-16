@@ -174,6 +174,12 @@
   background-color: #09598b;
 }
 
+.header-button-container button:focus,
+.booking-form-button button:focus {
+  background-color: var(--emailButtonTextColor);
+  outline: 1px solid var(--primaryTextColor);
+}
+
 .main-container {
   width: 100%;
   height: auto;
@@ -356,6 +362,12 @@
   font-size: var(--fontSize-small);
   font-weight: 550;
   color: var(--mutedTextColor);
+}
+
+.first-form-field:hover,
+.second-form-field:hover,
+.last-form-field:hover {
+  outline: 1px solid var(--primaryButtonBgColor);
 }
 
 .booking-form-button {
@@ -908,6 +920,10 @@
   font-weight: var(--fontWeight-medium);
 }
 
+.subscribe-form input:focus {
+  outline: 1px solid var(--primaryButtonBgColor);
+}
+
 .subscribe-form button {
   width: 10%;
   height: auto;
@@ -919,6 +935,17 @@
   font-size: 0.92rem;
   font-weight: var(--fontWeight-semiBold);
   cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: var(--emailButtonTextColor);
+  color: var(--pryButtonTextColor);
+}
+
+.subscribe-form button:focus {
+  background-color: var(--emailButtonTextColor);
+  color: var(--pryButtonTextColor);
+  outline: 1px solid var(--mutedTextColor);
 }
 
 .subscribe-p {

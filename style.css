@@ -177,7 +177,7 @@
 .header-button-container button:focus,
 .booking-form-button button:focus {
   background-color: var(--emailButtonTextColor);
-  outline: 1px solid var(--primaryTextColor);
+  outline: 2px solid var(--primaryTextColor);
 }
 
 .main-container {
@@ -367,7 +367,7 @@
 .first-form-field:hover,
 .second-form-field:hover,
 .last-form-field:hover {
-  outline: 1px solid var(--primaryButtonBgColor);
+  outline: 2px solid var(--primaryButtonBgColor);
 }
 
 .booking-form-button {
@@ -921,7 +921,7 @@
 }
 
 .subscribe-form input:focus {
-  outline: 1px solid var(--primaryButtonBgColor);
+  outline: 2px solid var(--primaryButtonBgColor);
 }
 
 .subscribe-form button {
@@ -945,7 +945,7 @@
 .subscribe-form button:focus {
   background-color: var(--emailButtonTextColor);
   color: var(--pryButtonTextColor);
-  outline: 1px solid var(--mutedTextColor);
+  outline: 2px solid var(--mutedTextColor);
 }
 
 .subscribe-p {

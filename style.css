@@ -67,7 +67,7 @@
   --borderColor: #e1e7ef;
   --emailBgColor: linear-gradient(135deg, #074d78, #0da2e7);
   --footerBgColor: #0a6ca9;
-  --heroOverlayColor: rgba(7, 77, 120, 0.35);
+  --heroOverlayColor: rgba(4, 39, 61, 0.55);
   --heroHeaderColor: rgba(255, 255, 255, 0.9);
   --heroHeaderLogoColor: linear-gradient(135deg, #074d78, #0da2e7);
 
@@ -1582,7 +1582,7 @@
   .hero-texts-section p {
     font-size: var(--fontSize-small);
     padding: 0.75rem 1rem 0 1rem;
-    max-width: 100%;
+    max-width: 90%;
     flex-wrap: wrap;
   }
 
@@ -1642,6 +1642,16 @@
     row-gap: var(--space2);
     padding-top: 24.5rem;
     padding-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .first-card,
+  .why-card,
+  .feedback-card,
+  .footer-card,
+  .footer-card-link,
+  .footer-card-contact {
+    width: 100%;
   }
 
   .first-cards-container,
@@ -1652,15 +1662,6 @@
     align-items: center;
     row-gap: 2rem;
     padding: 1rem;
-  }
-
-  .first-card,
-  .why-card,
-  .feedback-card,
-  .footer-card,
-  .footer-card-link,
-  .footer-card-contact {
-    width: 90%;
   }
 
   /* Why choose us section */

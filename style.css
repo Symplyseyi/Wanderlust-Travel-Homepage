@@ -1088,7 +1088,10 @@
   font-size: 1.02rem;
   font-weight: var(--fontWeight-medium);
 }
-@media (min-width: 510px) and (max-width: 1000px) {
+
+/* TABLET VERSION (max-width: 1000px) */
+
+@media (min-width: 550px) and (max-width: 1000px) {
   /* HEADER */
   .hero-header-section {
     width: 100%;
@@ -1270,9 +1273,9 @@
   }
 }
 
-/* MOBILE VERSION (max-width: 500px) */
+/* MOBILE VERSION (max-width: 540px) */
 
-@media (min-width: 410px) and (max-width: 500px) {
+@media (min-width: 410px) and (max-width: 540px) {
   /* Hide header section on mobile */
   .header-navbar-links {
     display: none;
@@ -1289,13 +1292,13 @@
   }
 
   .hero-texts-section h1 {
-    font-size: var(--smallClampVariable);
+    font-size: 1.5rem;
     max-width: 90%;
     word-spacing: -0.2rem;
   }
 
   .hero-texts-section p {
-    font-size: var(--fontSize-medium);
+    font-size: var(--fontSize-small);
     padding: 0.75rem 1rem 0 1rem;
     max-width: 80%;
     flex-wrap: wrap;
@@ -1303,7 +1306,7 @@
 
   /* Booking card responsive */
   .hero-booking-card {
-    padding: 10rem 0 8rem 0;
+    padding: 8rem 0 8rem 0;
   }
 
   .header-button-container button {
@@ -1348,7 +1351,7 @@
     justify-content: start;
     align-items: start;
     row-gap: var(--space2);
-    padding-top: 26rem;
+    padding-top: 25rem;
     padding-bottom: 2rem;
   }
 
@@ -1368,7 +1371,28 @@
   .footer-card,
   .footer-card-link,
   .footer-card-contact {
-    width: 90%;
+    width: 100%;
+  }
+
+  .first-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: var(--space3);
+    border-top-right-radius: var(--space3);
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
   }
 
   /* Why choose us section */
@@ -1545,14 +1569,18 @@
   }
 
   .hero-texts-section h1 {
-    font-size: var(--smallClampVariable);
+    font-size: 1.5rem;
     max-width: 90%;
     word-spacing: -0.2rem;
-    flex-wrap: flex;
+  }
+
+  .hero-texts-section h1 span {
+    display: block;
+    margin-top: 0.15rem;
   }
 
   .hero-texts-section p {
-    font-size: var(--fontSize-medium);
+    font-size: var(--fontSize-small);
     padding: 0.75rem 1rem 0 1rem;
     max-width: 100%;
     flex-wrap: wrap;
@@ -1560,7 +1588,7 @@
 
   /* Booking card responsive */
   .hero-booking-card {
-    padding: 8rem 0 8rem 0;
+    padding: 5rem 0 8rem 0;
   }
 
   .first-card-section h1,
@@ -1612,7 +1640,7 @@
     justify-content: start;
     align-items: start;
     row-gap: var(--space2);
-    padding-top: 26rem;
+    padding-top: 24.5rem;
     padding-bottom: 2rem;
   }
 
@@ -1644,7 +1672,7 @@
     justify-content: start;
     align-items: start;
     row-gap: var(--space4);
-    margin: 2rem 0 1rem 0;
+    margin: 1.5rem 0 1rem 0;
     scroll-margin-top: 120px;
   }
 
@@ -1668,7 +1696,7 @@
     justify-content: start;
     align-items: start;
     row-gap: var(--space4);
-    margin: 4rem 0;
+    margin: 3rem 0;
     scroll-margin-top: 120px;
   }
 
